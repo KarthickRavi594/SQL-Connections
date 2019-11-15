@@ -11,3 +11,13 @@ var Department_Master = "CREATE TABLE Department_Master ( DepartmentId int NOT N
 var Subject_Master = "CREATE TABLE Subject_Master ( SubjectId int NOT NULL, PRIMARY KEY (SubjectId), SubjectName varchar(255) NOT NULL);"
 
 var Mark_Details = "CREATE TABLE Mark_Details (MarkId int NOT NULL, StudentId int NOT NULL, SubjectId int NOT NULL, TotalMark float);"
+
+module.exports = {
+    Student_Details : Student_Details,
+    Country_Master : Country_Master,
+    City_Master : City_Master,
+    State_Master : State_Master,
+    Department_Master : Department_Master,
+    Subject_Master : Subject_Master,
+    Mark_Details : Mark_Details
+}
