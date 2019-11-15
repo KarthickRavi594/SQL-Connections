@@ -1,21 +1,12 @@
-verification URL = https://www.linkedin.com/developers/apps/verification/ed160ec5-8a75-412b-a0f4-a79b5b2ee821
+var Student_Details = "CREATE TABLE Student_Details ( StudentId int NOT NULL, StudentCode varchar(255) NOT NULL, StudentName varchar(255), DateOfBirth Date, Address_1 varchar(255), Address_2 varchar(255), CountryId int, StateId int, CityId int, DepartmentId int, Pincode int, PhoneNumber int unique, MobileNumber int unique, PRIMARY KEY (StudentId));"
 
-linkedin.people.search()
+var Country_Master = "CREATE TABLE Country_Master ( CountryId int NOT NULL, CountryName varchar(255) NOT NULL);"
 
+var State_Master = "CREATE TABLE State_Master ( StateId int NOT NULL, StateName varchar(255) NOT NULL, CountryId int );"
 
-https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=81vffu3ze7htki&scope=r_liteprofile&state=STATE&redirect_uri=https://www.linkedin.com/in/karthick05/
+var City_Master = "CREATE TABLE City_Master ( CityId int NOT NULL, CityName varchar(255) NOT NULL, StateId int);"
 
-POST /oauth/v2/accessToken HTTP/1.1
-Host: www.linkedin.com
-Content-Type: application/x-www-form-urlencoded
-
-https://www.linkedin.com/oauth/v2/accessToken&grant_type=client_credentials&client_id=81vffu3ze7htki&client_secret=qnBf8homIRYJLcp5
-
-
-
-https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&redirect_uri=https://www.linkedin.com/in/karthick05/&client_id=81vffu3ze7htki&client_secret=qnBf8homIRYJLcp5
-
-
+var Department_Master = "CREATE TABLE Department_Master ( DepartmentId int NOT NULL, Department_Name varchar(255) NOT NULL);"
 
 
 CREATE TABLE Student_Details (
